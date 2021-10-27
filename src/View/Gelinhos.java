@@ -81,11 +81,11 @@ public class Gelinhos {
     private JPanel pnlVendasDadosFinais;
     private JLabel lblVendasDesconto;
     private JLabel lblVendasValorAPagar;
-    private JLabel lblEstoqueQuantidadeAmendoim;
-    private JLabel lblEstoqueQuantidadeCoco;
-    private JLabel lblEstoqueQuantidadeLimao;
-    private JLabel lblEstoqueQuantidadeMaracuja;
-    private JLabel lblEstoqueQuantidadeUva;
+    private JLabel lblVendasEstoqueAmendoim;
+    private JLabel lblVendasEstoqueCoco;
+    private JLabel lblVendasEstoqueLimao;
+    private JLabel lblVendasEstoqueMaracuja;
+    private JLabel lblVendasEstoqueUva;
 
     public Gelinhos() {
         //-------------------------------------------------------------ADICIONA------------------------------------
@@ -146,6 +146,12 @@ public class Gelinhos {
         txtEstoqueLimao.setText(String.valueOf(spinAddLimao.getValue()));
         txtEstoqueMaracuja.setText(String.valueOf(spinAddMaracuja.getValue()));
         txtEstoqueUva.setText(String.valueOf(spinAddUva.getValue()));
+
+        lblVendasEstoqueAmendoim.setText(String.valueOf(spinAddAmendoim.getValue()));
+        lblVendasEstoqueCoco.setText(String.valueOf(spinAddCoco.getValue()));
+        lblVendasEstoqueLimao.setText(String.valueOf(spinAddLimao.getValue()));
+        lblVendasEstoqueMaracuja.setText(String.valueOf(spinAddMaracuja.getValue()));
+        lblVendasEstoqueUva.setText(String.valueOf(spinAddUva.getValue()));
     }
 
     public void limpaAdiciona(){
@@ -170,16 +176,21 @@ public class Gelinhos {
     }
 
     public void calculaQuantidadeEstoque(){
-        int soma;
-        int quantidadeAmendoim = Integer.parseInt(txtEstoqueAmendoim.getText());
-        int quantidadeCoco = Integer.parseInt(txtEstoqueCoco.getText());
-        int quantidadeLimao = Integer.parseInt(txtEstoqueLimao.getText());
-        int quantidadeMaracuja = Integer.parseInt(txtEstoqueMaracuja.getText());
-        int quantidadeUva = Integer.parseInt(txtEstoqueUva.getText());
 
-        soma = quantidadeAmendoim+quantidadeCoco+quantidadeLimao+quantidadeMaracuja+quantidadeUva;
-        txtEstoqueQuantidade.setText(String.valueOf(soma));
-        txtEstoqueRS.setText(String.valueOf(soma*1.5));
+                int soma;
+
+                int quantidadeAmendoim = Integer.parseInt(txtEstoqueAmendoim.getText());
+                int quantidadeCoco = Integer.parseInt(txtEstoqueCoco.getText());
+                int quantidadeLimao = Integer.parseInt(txtEstoqueLimao.getText());
+                int quantidadeMaracuja = Integer.parseInt(txtEstoqueMaracuja.getText());
+                int quantidadeUva = Integer.parseInt(txtEstoqueUva.getText());
+
+                soma = quantidadeAmendoim + quantidadeCoco + quantidadeLimao + quantidadeMaracuja + quantidadeUva;
+                txtEstoqueQuantidade.setText(String.valueOf(soma));
+                txtEstoqueRS.setText(String.valueOf(soma * 1.5));
+
+
+
     }
 
 
